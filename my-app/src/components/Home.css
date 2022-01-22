@@ -1,0 +1,85 @@
+.parent{
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.children{
+    color: crimson;
+    padding: 15px;
+}
+
+.heading{
+    text-align: center;
+    padding: 15px;
+    text-decoration: wavy;
+}
+
+.image_container{
+    object-fit: contain;
+    padding: 10px;
+    height: 300px;
+    width: 300px;
+}
+
+.wrapper{
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    margin-bottom: 50px;
+  }
+  
+  .link_wrapper{
+    position: relative;
+  }
+  
+  a{
+    display: block;
+    width: 250px;
+    height: 50px;
+    line-height: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    background: white;
+    text-align: center;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 0.5px solid black;
+    transition: all .35s;
+  }
+  
+  .icon{
+    width: 50px;
+    height: 50px;
+    border: 3px solid transparent;
+    position: absolute;
+    transform: rotate(45deg);
+    right: 0;
+    top: 0;
+    z-index: -1;
+    transition: all .35s;
+  }
+  
+  .icon svg{
+    width: 30px;
+    position: absolute;
+    top: calc(50% - 15px);
+    left: calc(50% - 15px);
+    transform: rotate(-45deg);
+    fill: #2ecc71;
+    transition: all .35s;
+  }
+  
+  a:hover{
+    width: 200px;
+    border: 3px solid #2ecc71;
+    background: transparent;
+    color: #2ecc71;
+  }
+  
+  a:hover + .icon{
+    border: 3px solid #2ecc71;
+    right: -25%;
+  }
